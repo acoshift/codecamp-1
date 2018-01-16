@@ -13,6 +13,7 @@
     "bcryptjs": "^2.4.3",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
-    "koa-router": "^7.3.0"
+    "koa-router": "^7.3.0",
+    "koa-session": "^5.7.1"
   }
 }
