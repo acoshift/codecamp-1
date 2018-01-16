@@ -26,7 +26,7 @@ create table follows (
   following_id int,
   created_at timestamp not null default now(),
   primary key (follower_id, following_id),
-  foreign key (follower_id) references users (id)
+  foreign key (follower_id) references users (id),
   foreign key (following_id) references users (id)
 );
 
@@ -136,7 +136,7 @@ create table notifications (
   title varchar(60) not null,
   content varchar(80) not null,
   photo varchar(255) not null,
-  read boolean not null default false,
+  is_read boolean not null default false,
   created_at timestamp not null default now(),
   primary key (id),
   foreign key (user_id) references users (id)
