@@ -1,4 +1,5 @@
 const mysql2 = require('mysql2/promise')
+const createUserModel = require('./model/user')
 
 async function main () {
   const db = await mysql2.createConnection({
@@ -7,7 +8,7 @@ async function main () {
     database: 'codecamp'
   })
 
-  const User = require('./model/user')(db)
+  const User = createUserModel(db)
 
   const user1 = await User.find(1)
   user1.name = 'tester'
