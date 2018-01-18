@@ -1,0 +1,17 @@
+const db = await pool.getConnection()
+try {
+  await db.beginTransaction()
+  const tweetId = await tweet.create(db, ....)
+  await tweet.addPhoto(db, tweetId, 'sdsadasdsa')
+  await tweet.addPhoto(db, tweetId, 'sdsadasdsa')
+  await tweet.addPhoto(db, tweetId, 'sdsadasdsa')
+  await tweet.addPhoto(db, tweetId, 'sdsadasdsa')
+  await tweet.addPhoto(db, tweetId, 'sdsadasdsa')
+  await poll.create(db, '....')
+  await db.commit()
+} catch (err) {
+  console.error(err)
+  await db.rollback()
+} finally {
+  db.release()
+}
