@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.3.0",
     "mysql2": "^1.5.1"
   }
 }
