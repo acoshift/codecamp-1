@@ -40,6 +40,7 @@ class User {
 module.exports = function (db) {
   return {
     async find (id) {
+      // TODO: fix bug id undefined
       const [rows] = await this.db.execute(`
         select
           first_name, last_name
@@ -49,6 +50,7 @@ module.exports = function (db) {
       return new User(db, rows[0])
     },
     async findAll () {
+      // TODO: fix bug id undefined
       const [rows] = await this.db.execute(`
         select
           first_name, last_name
