@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "mysql2": "^1.5.1"
+  }
+}
